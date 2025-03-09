@@ -56,7 +56,7 @@ export default function TermsAndConditions() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <div className="flex items-center space-x-3">
-            <Image src="/placeholder.svg?height=40&width=40" alt="GST Magic Logo" width={40} height={40} />
+            <Image src="/images/icon.png?height=40&width=40" alt="GST Magic Logo" width={40} height={40} />
             <span className="text-2xl font-bold text-white">GST Magic</span>
           </div>
 
