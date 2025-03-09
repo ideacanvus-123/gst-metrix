@@ -1,0 +1,145 @@
+@media screen and (min-width:1366px) 
+{
+    .container {
+        max-width: 1300px;
+    }
+}
+
+
+@media screen and (max-width:1366px) 
+{
+
+}
+
+
+@media screen and (max-width:1200px) 
+{
+}
+
+
+@media screen and (max-width:1050px) 
+{
+
+}
+
+@media screen and (max-width:992px) 
+{
+    .NavbarBrand {
+        width: 75px !important;
+      }  
+    .search_left_link li
+    {
+        display: inline-block;
+        margin-right: 10px;
+    } 
+    .search_left_link button {
+        padding: 6px 40px 6px 22px;
+    }  
+}
+
+@media screen and (max-width:850px) 
+{
+
+}
+
+
+@media screen and (max-width:768px) 
+{
+    .home_about_text ul li {
+        font-size: 14px;
+        display: inline-block;
+        text-align: left;
+    }
+    .service_tab_section .nav-pills
+    {
+      flex-wrap: wrap;
+    }
+    .header_nevigation_section {
+        border-radius: 20px; 
+    }
+    .sitter_header_details
+{
+  padding-left: 0 !important;
+}
+.header_top
+{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+@media screen and (max-width:600px) 
+{
+    .nav_login_but {
+        padding: 10px 12px !important;
+    }
+    .home_form_tab_area
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .homepage_from_section_top_area .tab-button2 {
+        margin:10px !important;
+        max-width: 123px;
+    }
+    .search_result_box1 {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@media screen and (max-width:576px) 
+{
+    .home_form {
+        padding: 20px;
+    }
+    .home_form_tab_area {
+        padding: 10px;
+    }
+    .homepage_from_section_top_area .tab-button2 {
+        margin:2px !important;
+    }
+    .home_form_tab_area {
+        width: calc(100% - 40px);
+        margin: 20px 20px 0 20px;
+    }
+    .homepage_from_section_bottom_area_area {
+        padding: 20px;
+    }
+
+    .search_result_box1 {
+        flex-wrap: wrap;
+    }
+    .search_result_box1 .img_area {
+        width: 100% !important;
+    }
+    .search_result_box1 .text_area {
+        width: 100% !important;
+        padding-left:0 !important;
+        margin-top: 15px;
+    }
+}
+
+
+@media screen and (max-width:480px) 
+{
+    .search_result_box1 .text_area .top_section {
+        flex-wrap: wrap;
+    }
+    .search_result_box1 .text_area .right {
+
+        flex: 0 0 100%;
+        flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    }
+}
+
+
+@media screen and (max-width:400px) 
+{
+    .home_about_text ul li {
+        width: 100%;
+    }
+}
