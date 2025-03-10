@@ -245,7 +245,7 @@ export default function TermsAndConditions() {
 
       {/* Hero Section with Title */}
       <motion.div initial="hidden" animate="visible" variants={fadeIn} className="py-10 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+        <h1 className="text-3xl md:text-7xl font-bold mb-4">
           <motion.span
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
@@ -264,14 +264,14 @@ export default function TermsAndConditions() {
           </motion.span>
         </h1>
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4"
-        >
-          Welcome to GST Magic AI. By accessing and using our platform, you agree to comply with these Terms and
-          Conditions. If you do not agree, please do not use our services.
-        </motion.p>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+  className="text-gray-400 text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-4"
+>
+  Welcome to GST Magic AI. By accessing and using our platform, you agree to comply with these Terms and
+  Conditions. If you do not agree, please do not use our services.
+</motion.p>
       </motion.div>
 
       {/* Terms Content with Scroll Animations */}
@@ -393,7 +393,7 @@ function ScrollAnimatedCard({ index, title, content, isActive, setActive }) {
         variants={contentVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-white relative z-10"
+        className="text-white relative z-10 whitespace-pre-line"
       >
         {content.split("\n").map((paragraph, i) => {
           // Check if the paragraph contains bullet points
