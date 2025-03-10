@@ -4,6 +4,18 @@ import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence, useInView } from "framer-motion"
+import {
+  Info,
+  UserCheck,
+  FileText,
+  UserCog,
+  ShieldAlert,
+  Lock,
+  Copyright,
+  XCircle,
+  RefreshCw,
+  Scale,
+} from "lucide-react"
 
 export default function TermsAndConditions() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -264,14 +276,14 @@ export default function TermsAndConditions() {
           </motion.span>
         </h1>
         <motion.p
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1 }}
-  className="text-gray-400 text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-4"
->
-  Welcome to GST Magic AI. By accessing and using our platform, you agree to comply with these Terms and
-  Conditions. If you do not agree, please do not use our services.
-</motion.p>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-gray-400 text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-4"
+        >
+          Welcome to GST Magic AI. By accessing and using our platform, you agree to comply with these Terms and
+          Conditions. If you do not agree, please do not use our services.
+        </motion.p>
       </motion.div>
 
       {/* Terms Content with Scroll Animations */}
@@ -384,9 +396,19 @@ function ScrollAnimatedCard({ index, title, content, isActive, setActive }) {
         variants={titleVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-2xl font-bold text-[#d44cf8] mb-4 relative z-10"
+        className="text-2xl font-bold text-[#d44cf8] mb-4 relative z-10 flex items-center gap-3"
       >
-        {index + 1}. {title}
+        {index === 0 && <Info className="w-6 h-6" />}
+        {index === 1 && <UserCheck className="w-6 h-6" />}
+        {index === 2 && <FileText className="w-6 h-6" />}
+        {index === 3 && <UserCog className="w-6 h-6" />}
+        {index === 4 && <ShieldAlert className="w-6 h-6" />}
+        {index === 5 && <Lock className="w-6 h-6" />}
+        {index === 6 && <Copyright className="w-6 h-6" />}
+        {index === 7 && <XCircle className="w-6 h-6" />}
+        {index === 8 && <RefreshCw className="w-6 h-6" />}
+        {index === 9 && <Scale className="w-6 h-6" />}
+        {title}
       </motion.h2>
 
       <motion.div
