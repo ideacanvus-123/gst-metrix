@@ -245,7 +245,7 @@ export default function TermsAndConditions() {
 
       {/* Hero Section with Title */}
       <motion.div initial="hidden" animate="visible" variants={fadeIn} className="py-10 text-center">
-        <h1 className="text-7xl font-bold mb-4">
+        <h1 className="text-4xl font-bold mb-4">
           <motion.span
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
