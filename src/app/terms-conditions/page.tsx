@@ -245,7 +245,7 @@ export default function TermsAndConditions() {
 
       {/* Hero Section with Title */}
       <motion.div initial="hidden" animate="visible" variants={fadeIn} className="py-10 text-center">
-        <h1 className="text-4xl font-bold mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
           <motion.span
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
@@ -267,7 +267,7 @@ export default function TermsAndConditions() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-gray-400 text-lg max-w-2xl mx-auto px-4"
+          className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4"
         >
           Welcome to GST Magic AI. By accessing and using our platform, you agree to comply with these Terms and
           Conditions. If you do not agree, please do not use our services.
@@ -393,13 +393,46 @@ function ScrollAnimatedCard({ index, title, content, isActive, setActive }) {
         variants={contentVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-white relative z-10 whitespace-pre-line"
+        className="text-white relative z-10"
       >
-        {content.split("\n").map((paragraph, i) => (
-          <p key={i} className="mb-2">
-            {paragraph}
-          </p>
-        ))}
+        {content.split("\n").map((paragraph, i) => {
+          // Check if the paragraph contains bullet points
+          if (paragraph.includes("• ")) {
+            return (
+              <div key={i} className="mb-4 pl-8">
+                {paragraph.split("• ").map((item, j) => {
+                  if (j === 0) return null // Skip the first empty part
+                  return (
+                    <div key={j} className="flex mb-3">
+                      <span className="text-[#d44cf8] mr-3 flex-shrink-0">•</span>
+                      <span className="flex-1">{item.trim()}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          } else if (paragraph.includes("○ ")) {
+            return (
+              <div key={i} className="mb-4 pl-12">
+                {paragraph.split("○ ").map((item, j) => {
+                  if (j === 0) return null // Skip the first empty part
+                  return (
+                    <div key={j} className="flex mb-3">
+                      <span className="text-[#a039c3] mr-3 flex-shrink-0">○</span>
+                      <span className="flex-1">{item.trim()}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          } else {
+            return (
+              <p key={i} className="mb-3">
+                {paragraph}
+              </p>
+            )
+          }
+        })}
       </motion.div>
     </motion.div>
   )
